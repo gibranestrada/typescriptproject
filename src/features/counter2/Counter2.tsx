@@ -9,7 +9,7 @@ import {
 } from './counterSlice2';
 import styles from './Counter.module.css';
 
-export function Counter2() {
+export const Counter2: React.FC = () => {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');

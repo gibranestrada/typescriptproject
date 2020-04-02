@@ -4,7 +4,7 @@ import { Counter } from './features/counter/Counter';
 import { Counter2 } from './features/counter2/Counter2';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
