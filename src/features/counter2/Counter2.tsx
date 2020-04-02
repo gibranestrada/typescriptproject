@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  decrement2,
-  increment2,
-  incrementByAmount2,
-  incrementAsync2,
-  selectCount2,
+  decrement,
+  increment,
+  incrementByAmount,
+  incrementAsync,
+  selectCount,
 } from './counterSlice2';
 import styles from './Counter.module.css';
 
 export function Counter2() {
-  const count = useSelector(selectCount2);
+  const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
-
+  console.log('what 2')
   return (
     <div>
       <div className={styles.row}>
         <button
           className={styles.button}
           aria-label="Increment value"
-          onClick={() => dispatch(increment2())}
+          onClick={() => dispatch(increment())}
         >
           +
         </button>
@@ -28,7 +28,7 @@ export function Counter2() {
         <button
           className={styles.button}
           aria-label="Decrement value"
-          onClick={() => dispatch(decrement2())}
+          onClick={() => dispatch(decrement())}
         >
           -
         </button>
@@ -43,14 +43,14 @@ export function Counter2() {
         <button
           className={styles.button}
           onClick={() =>
-            dispatch(incrementByAmount2(Number(incrementAmount) || 0))
+            dispatch(incrementByAmount(Number(incrementAmount) || 0))
           }
         >
           Add Amount
         </button>
         <button
           className={styles.asyncButton}
-          onClick={() => dispatch(incrementAsync2(Number(incrementAmount) || 0))}
+          onClick={() => dispatch(incrementAsync(Number(incrementAmount) || 0))}
         >
           Add Async
         </button>
