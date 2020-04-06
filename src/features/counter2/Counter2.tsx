@@ -13,7 +13,6 @@ export const Counter2: React.FC = () => {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
-  console.log('what 2')
   return (
     <div>
       <div className={styles.row}>
