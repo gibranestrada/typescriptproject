@@ -10,7 +10,7 @@ import {
 import styles from './Counter.module.css';
 
 export const Counter: React.FC = () => {
-  const count = useSelector(selectCount);
+  const count = useSelector(selectCount);//
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
   console.log('what 1')
